@@ -1,0 +1,4 @@
+*.o
+slock
+pkg/*
+*.pkg.tar.xz
