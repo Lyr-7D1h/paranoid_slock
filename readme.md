@@ -1,0 +1,3 @@
+# Custom SLock
+
+makepkg -si
