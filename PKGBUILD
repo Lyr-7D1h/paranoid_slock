@@ -9,11 +9,7 @@ url="https://tools.suckless.org/slock"
 license=('MIT')
 depends=('libxext' 'libxrandr')
 
-build() {
-  make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
-}
-
 package() {
-  make PREFIX=/usr DESTDIR="$pkgdir" install
-  install -m644 -D LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    make DESTDIR="$pkgdir" clean install
+    install -m644 -D LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
