@@ -1,6 +1,6 @@
 # Maintainer: Lyr <lyr-7d1h@pm.me>
 
-pkgname=slock
+pkgname=paranoid_slock
 pkgver=1.4
 pkgrel=3
 pkgdesc="A simple screen locker for X - Configured for paranoids"
