@@ -8,8 +8,10 @@ arch=('x86_64')
 url="https://tools.suckless.org/slock"
 license=('MIT')
 depends=('libxext' 'libxrandr')
+conflicts=('slock')
 
 package() {
     make DESTDIR="$pkgdir" clean install
     install -m644 -D LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    install -D -m700 "$srcdir/slock@.service" "$pkgdir/usr/lib/systemd/system/slock@.service"
 }
